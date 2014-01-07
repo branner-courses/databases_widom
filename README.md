@@ -9,4 +9,6 @@ Online versions of the course include:
 
 The book is Jeffrey D. Ullum and Jennifer Widom, _A First Course in Database Systems_, 3rd ed. (2007). I have seen a scanned (non-searchable) [copy of the Chinese edition](http://bookza.org/book/2044075/4a474b) (China machine Press 机械工业出版社, 2008) on line, but I don't know anything about the legality of the scan (the Chinese version appears to be licensed for sale in the PRC).
 
+Exercises are done using Jun Yang's [RA Relational Algebra Interpreter](http://www.cs.duke.edu/~junyang/ra/). Installation is described under the "Software Guides" tab of the Stanford course site.
+
 [end]
