@@ -16,7 +16,6 @@
    * Use `<!ELEMENT <element name> EMPTY>`: for self-closing tags
    * Use `<!ELEMENT <element name> (Title,(Course|Professor|Lecturer)*)>`: to combine required with Kleene-starred items
    * Use `<!ELEMENT <element name> (#PCDATA|Courseref)*>`: for cases where an element may either contain text or a child element (the child element appearing within the text)
-
   1. Issues surrounding `ATTLIST`:
 
     * Use `<!ATTLIST <element name> <attribute name> CDATA #REQUIRED>`: for attributes with required content
