@@ -19,8 +19,8 @@
 
  1. Issues surrounding `ATTLIST`:
 
-  * Use `<!ATTLIST <element name> <attribute name> CDATA #REQUIRED>`: for attributes with required content
-  * Use `<!ATTLIST <element name> <attribute name> CDATA #IMPLIED>`: for attributes with optional content
+     * Use `<!ATTLIST <element name> <attribute name> CDATA #REQUIRED>`: for attributes with required content
+     * Use `<!ATTLIST <element name> <attribute name> CDATA #IMPLIED>`: for attributes with optional content
 
 ----
 
