@@ -16,3 +16,13 @@ In most cases, the lectures are identical. In some cases (lectures 5-1 and 5-2, 
 The book is Jeffrey D. Ullum and Jennifer Widom, _A First Course in Database Systems_, 3rd ed. (2007). I have seen a scanned (non-searchable) [copy of the Chinese edition](http://bookza.org/book/2044075/4a474b) (China Machine Press 机械工业出版社, 2008) on line, but I don't know anything about the legality of the scan (the Chinese version appears to be licensed for sale in the PRC).
 
 [end]
+achine Press 机械工业出版社, 2008) on line, but I don't know anything about the legality of the scan (the Chinese version appears to be licensed for sale in the PRC).
+
+### RA Relational Algebra Interpreter
+>>>>>>> f2bcdece7603f30345fc176d0c9086b9e92eede3
+
+### Book
+
+The book is Jeffrey D. Ullum and Jennifer Widom, _A First Course in Database Systems_, 3rd ed. (2007). I have seen a scanned (non-searchable) [copy of the Chinese edition](http://bookza.org/book/2044075/4a474b) (China Machine Press 机械工业出版社, 2008) on line, but I don't know anything about the legality of the scan (the Chinese version appears to be licensed for sale in the PRC).
+
+[end]
