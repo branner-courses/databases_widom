@@ -1,26 +1,26 @@
 ## DTD exercises
 
- 1. Validation. At the command line use
+  1. Validation. At the command line use
  
         xmllint --valid --noout <filename>
 
- 1. Types of entry:
+  1. Types of entry:
 
-  * Use `<!DOCTYPE countries [ ... ]>` for frame holding `<!ELEMENT ...>` items
-  * Use `<!ELEMENT <element name> (<child names>)>`: for all elements at any level of depty
-  * Use `<!ATTLIST <element name> <attribute name> <type> <required or implied>>` for attributes of an element, placed under the element in question (?)
+   * Use `<!DOCTYPE countries [ ... ]>` for frame holding `<!ELEMENT ...>` items
+   * Use `<!ELEMENT <element name> (<child names>)>`: for all elements at any level of depty
+   * Use `<!ATTLIST <element name> <attribute name> <type> <required or implied>>` for attributes of an element, placed under the element in question (?)
 
- 1. Issues surrounding `ELEMENT`:
+  1. Issues surrounding `ELEMENT`:
 
-  * Use `<!ELEMENT <element name> (#PCDATA)>`: for text-content
-  * Use `<!ELEMENT <element name> EMPTY>`: for self-closing tags
-  * Use `<!ELEMENT <element name> (Title,(Course|Professor|Lecturer)*)>`: to combine required with Kleene-starred items
-  * Use `<!ELEMENT <element name> (#PCDATA|Courseref)*>`: for cases where an element may either contain text or a child element (the child element appearing within the text)
+   * Use `<!ELEMENT <element name> (#PCDATA)>`: for text-content
+   * Use `<!ELEMENT <element name> EMPTY>`: for self-closing tags
+   * Use `<!ELEMENT <element name> (Title,(Course|Professor|Lecturer)*)>`: to combine required with Kleene-starred items
+   * Use `<!ELEMENT <element name> (#PCDATA|Courseref)*>`: for cases where an element may either contain text or a child element (the child element appearing within the text)
 
- 1. Issues surrounding `ATTLIST`:
+  1. Issues surrounding `ATTLIST`:
 
-     * Use `<!ATTLIST <element name> <attribute name> CDATA #REQUIRED>`: for attributes with required content
-     * Use `<!ATTLIST <element name> <attribute name> CDATA #IMPLIED>`: for attributes with optional content
+    * Use `<!ATTLIST <element name> <attribute name> CDATA #REQUIRED>`: for attributes with required content
+    * Use `<!ATTLIST <element name> <attribute name> CDATA #IMPLIED>`: for attributes with optional content
 
 ----
 
