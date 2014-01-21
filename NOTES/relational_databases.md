@@ -12,7 +12,7 @@
 ### Definitions
 
  * The operators are closed over relations; their input and output are relations.
- * RA composing: π(σ); there is no need to compose the same type of operator
+ * π and σ are idempotent: there is no need to compose the same type of operator.
  * natural join ⨝ requires: attributes to be the same; is meaningful
 only when the notation by name is used
  * R ∩ S = R - (R - S)
