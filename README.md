@@ -9,7 +9,7 @@ Online versions of the course include:
  * [the 2014 Stanford version](https://class.stanford.edu/courses/Engineering/db/2014_1/about), which runs from 20140106-0322. An "informal Statement of Accomplishment" can be issued on completion of the course.
  * [the 2011 Coursera version](https://class.coursera.org/db), now in "self-service" mode — automated grading and an unmonitored forum exist, but no certificate is issued.
 
-In most cases, the lectures are identical. In some cases (lectures 5-1 and 5-2, for instance), the 2011 version is substantially longer and more detailed than the 2014 version.
+In most cases, the lectures are identical. In some cases (lectures 5-1 and 5-2, for instance), the 2011 version is a single, long video while the 2014 version is broken into sections, with a not-for-credit quiz between each pair of sections.
 
 ### Book
 
