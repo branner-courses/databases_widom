@@ -22,6 +22,8 @@ Also tried:
 );
 ~~~
 
+Correct.
+
 In symbols:
 
     π_{pizza} σ_{gender='female' ∧ age>20) (Person) ⨝ Eats
@@ -48,6 +50,8 @@ Also tried:
 );
 ~~~
 
+Correct.
+
 In symbols:
 
     π_{name} σ_{gender='female' ∧ pizzeria='Straw Hat'} (Person ⨝ Eats ⨝ Serves)
@@ -64,11 +68,18 @@ Q3. Find all pizzerias that serve at least one pizza for less than $10 that eith
 
 Correct.
 
+In symbols:
+
+    π_{name} 
+        (σ_{name='Amy' ∨ name='Fay'} (Eats) 
+        ⨝ 
+        (σ_{price<10} (Serves) )
+
 Q4. Find all pizzerias that serve at least one pizza for less than $10 that both Amy and Fay eat. 
 
 ~~~
 \project_{pizzeria} (
-    \project_{pizza,pizzeria} \select_{price<10} Serves
+    \select_{price<10} Serves
     \join
     (
       (\project_{pizza} \select_{name='Amy'} Eats)
@@ -79,6 +90,42 @@ Q4. Find all pizzerias that serve at least one pizza for less than $10 that both
 ~~~
 
 Correct.
+
+In symbols:
+
+    π_{pizzeria} (
+      σ_{price<10} (Serves)
+      ⨝ (
+        π_{pizza} σ_{name='Amy'} (Eats) }
+        ∩ 
+        π_{pizza} σ_{name='Fay'} (Eats) }
+        )
+    )
+
+Also, using natural self-join (with renaming, to isolate `pizza` as the common attribute):
+
+\project_{pizzeria} (
+    \select_{price<10} Serves
+    \join 
+      \project_{pizza} (
+      \rename_{amyName,pizza} \select_{name='Amy'} Eats
+      \join
+      (\select_{name='Fay'} Eats)
+      )
+)
+
+Correct.
+
+In symbols:
+
+    π_{pizzeria} (
+      σ_{price<10} (Serves)
+      ⨝ (
+        ρ_{name=amyName} π_{pizza} σ_{name='Amy'} (Eats)
+        ⨝ 
+        π_{pizza} σ_{name='Fay'} (Eats) 
+        )
+    )
 
 Q5. Find the names of all people who eat at least one pizza served by Dominos but who do not frequent Dominos. 
 
@@ -104,3 +151,34 @@ Then subtract (`\diff`) people who frequent Dominos: `\project_{name} \select_{p
 ~~~
 
 Correct.
+
+In symbols:
+
+    π_{name} (
+      ρ_{pizza=pizzaEats} π_{name, pizza} (Eats)
+        ⨝_{pizza=pizzaServes}
+      ρ_{pizza=pizzaServes} π_{pizza} σ_{pizzeria='Dominos'} (Serves)
+    } - 
+    π_{name} σ_{pizzeria='Dominos'} (Frequents)
+
+Also:
+
+~~~
+\project_{name} (
+  Eats 
+  \join
+  \project_{pizza} \select_{pizzeria='Dominos'} Serves
+)
+\diff (\project_{name} \select_{pizzeria='Dominos'} Frequents)
+~~~
+
+In symbols:
+
+    π_{name} (
+      Eats
+        ⨝
+      π_{pizza} σ_{pizzeria='Dominos'} (Serves)
+    } -
+    π_{name} σ_{pizzeria='Dominos'} (Frequents)
+
+[end]
